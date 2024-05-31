@@ -12,7 +12,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     for i in files{
         handles.push(tokio::spawn(async move {
-            read_csv(i).await.expect("TODO: panic message");
+            send(i).await.expect("TODO: panic message");
         }));
     }
 
