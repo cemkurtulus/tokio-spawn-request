@@ -23,7 +23,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-async fn read_csv(file_number: i32) -> Result<(), Box<dyn Error>> {
+async fn send(file_number: i32) -> Result<(), Box<dyn Error>> {
     let file_name = format!("{}.csv", file_number);
     println!("{}", file_name);
     let file = File::open(file_name).expect("file_name yok");
